@@ -13,7 +13,7 @@ public class MessageSupportFactory {
     private MessageSupportFactory() {
         props = new Properties();
         try {
-            props.load(getClass().getResourceAsStream("/msf.properties"));
+            props.load(getClass().getResourceAsStream("/spring/ch02/msf.properties"));
             String rendererClass = props.getProperty("renderer.class");
             String providerClass = props.getProperty("provider.class");
             renderer = (MessageRenderer) Class.forName(rendererClass).newInstance();

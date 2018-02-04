@@ -7,7 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class HelloWorldSpringDI {
 
     public static void main(String[] args) {
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring/app-context.xml");
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring/ch02/app-context.xml");
         MessageRenderer mr = ctx.getBean("renderer", MessageRenderer.class);
         mr.render();
     }
