@@ -2,7 +2,6 @@ package com.chist.prospring.ch03.annotated;
 
 import com.chist.prospring.ch02.decoupled.MessageProvider;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service("provider")
@@ -11,7 +10,7 @@ public class ConfigurableMessageProvider implements MessageProvider {
     private String message;
 
     @Autowired
-    public ConfigurableMessageProvider(@Value("Configurable message") String message) {
+    public ConfigurableMessageProvider(String message) {
         this.message = message;
     }
 
