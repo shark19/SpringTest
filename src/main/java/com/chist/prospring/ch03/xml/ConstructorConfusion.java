@@ -23,7 +23,7 @@ public class ConstructorConfusion {
 
     public static void main(String[] args) {
         try(GenericXmlApplicationContext ctx = new GenericXmlApplicationContext()) {
-            ctx.load("classpath:spring/ch03/configurable-message-provider-xml.xml");
+            ctx.load("classpath:spring/ch03/configurable-xml.xml");
             ctx.refresh();
             ConstructorConfusion cc  = (ConstructorConfusion) ctx.getBean("constructorConfusion");
             System.out.println(cc);

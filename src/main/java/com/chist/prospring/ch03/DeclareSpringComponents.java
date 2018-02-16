@@ -15,10 +15,10 @@ public class DeclareSpringComponents {
             .concat("spring/ch03/app-context-annotation.xml");
 
     private static final String CONFIGURABLE_XML_PATH = CLASSPATH
-            .concat("spring/ch03/configurable-message-provider-xml.xml");
+            .concat("spring/ch03/configurable-xml.xml");
 
     private static final String CONFIGURABLE_ANNOTATION_PATH = CLASSPATH
-            .concat("spring/ch03/configurable-message-provider-annotated.xml");
+            .concat("spring/ch03/configurable-annotated.xml");
 
     public static void main(String[] args) {
         //declare();
