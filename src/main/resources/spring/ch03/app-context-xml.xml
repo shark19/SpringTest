@@ -69,4 +69,32 @@
         </property>
     </bean>
 
+    <!-- method injection block -->
+    <bean id="singer"
+          class="com.chist.prospring.ch03.lookup_method_injection.xml.Singer"
+          scope="prototype"/>
+
+    <bean id="abstractLookupBean"
+          class="com.chist.prospring.ch03.lookup_method_injection.xml.AbstractLookupDemoBean">
+        <lookup-method name="getMySinger" bean="singer"/>
+    </bean>
+
+    <bean id="standardLookupBean"
+          class="com.chist.prospring.ch03.lookup_method_injection.xml.StandardLookupDemoBean">
+        <property name="mySinger" ref="singer"/>
+    </bean>
+
+    <!-- method replacement block -->
+    <bean id="methodReplacer"
+          class="com.chist.prospring.ch03.method_replacement.FormatMessageReplacer"/>
+
+    <bean id="replacementTarget"
+          class="com.chist.prospring.ch03.method_replacement.ReplacementTarget">
+        <replaced-method name="formatMessage" replacer="methodReplacer">
+            <arg-type>String</arg-type>
+        </replaced-method>
+    </bean>
+
+    <bean id="standardTarget"
+          class="com.chist.prospring.ch03.method_replacement.ReplacementTarget"/>
 </beans>
